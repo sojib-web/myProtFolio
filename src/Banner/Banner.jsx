@@ -1,13 +1,10 @@
+// @ts-nocheck
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import {
-  FaFacebook,
-  FaLinkedin,
-  FaReact,
-  FaGithub, // ✅ added GitHub icon
-} from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaReact, FaGithub } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFigma } from "react-icons/io5";
+import Lottie from "lottie-react";
 
 const Banner = () => {
   const [text] = useTypewriter({
@@ -19,7 +16,7 @@ const Banner = () => {
   });
 
   return (
-    <div className="w-full lgl:w-1/2 flex flex-col gap-20">
+    <div className="relative w-full lgl:w-1/2 flex flex-col gap-20 z-10">
       {/* Text Section */}
       <div className="flex flex-col gap-5">
         <h4 className="text-lg font-normal">WELCOME TO MY WORLD</h4>
@@ -43,13 +40,13 @@ const Banner = () => {
       </div>
 
       {/* Social & Skills Section */}
-      <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
+      <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between relative z-10">
         {/* Social Links */}
         <div>
           <h2 className="text-base uppercase font-titleFont mb-4">
             Find Me On
           </h2>
-          <div className="flex gap-6">
+          <div className="flex gap-4">
             <a
               href="https://www.facebook.com/sojib.ahmed.71271466"
               target="_blank"
@@ -77,22 +74,20 @@ const Banner = () => {
           </div>
         </div>
 
-        {/* Skills Icons */}
+        {/* Skills */}
         <div>
           <h2 className="text-base uppercase font-titleFont mb-4">Skills</h2>
           <div className="flex gap-6">
-            <span className="w-14 h-14 bg-black bg-opacity-25 text-gray-200 text-2xl rounded-md flex items-center justify-center shadow-md cursor-pointer hover:bg-opacity-50 hover:text-red-500 transition duration-300">
-              <FaReact />
-            </span>
-            <span className="w-14 h-14 bg-black bg-opacity-25 text-gray-200 text-2xl rounded-md flex items-center justify-center shadow-md cursor-pointer hover:bg-opacity-50 hover:text-red-500 transition duration-300">
-              <RiNextjsFill />
-            </span>
-            <span className="w-14 h-14 bg-black bg-opacity-25 text-gray-200 text-2xl rounded-md flex items-center justify-center shadow-md cursor-pointer hover:bg-opacity-50 hover:text-red-500 transition duration-300">
-              <RiTailwindCssFill />
-            </span>
-            <span className="w-14 h-14 bg-black bg-opacity-25 text-gray-200 text-2xl rounded-md flex items-center justify-center shadow-md cursor-pointer hover:bg-opacity-50 hover:text-red-500 transition duration-300">
-              <IoLogoFigma />
-            </span>
+            {[FaReact, RiNextjsFill, RiTailwindCssFill, IoLogoFigma].map(
+              (Icon, index) => (
+                <span
+                  key={index}
+                  className="w-14 h-14 bg-black bg-opacity-25 text-gray-200 text-2xl rounded-md flex items-center justify-center shadow-md cursor-pointer hover:bg-opacity-50 hover:text-red-500 transition duration-300"
+                >
+                  <Icon />
+                </span>
+              )
+            )}
           </div>
         </div>
       </div>

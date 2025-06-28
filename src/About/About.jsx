@@ -27,13 +27,11 @@ const About = () => {
           <h2 className="text-2xl font-bold mb-6">PERSONAL INFOS</h2>
           <div className="grid grid-cols-2 gap-y-4 text-sm">
             <p>
-              <span className="font-bold">First Name:</span> Md Sojib
+              <span className="font-bold">First Name:</span> Md Sojib Ali
             </p>
+
             <p>
-              <span className="font-bold">Last Name:</span> Ali
-            </p>
-            <p>
-              <span className="font-bold">Age:</span> 1+ Years
+              <span className="font-bold">Age:</span> 25 Years
             </p>
             <p>
               <span className="font-bold">Nationality:</span> Bangladeshi
