@@ -13,7 +13,7 @@ const Home = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.5 }}
-      className={`flex items-center justify-center pt-10 pb-28 md:pt-20 md:pb-10 transition-colors duration-300 ${
+      className={`min-h-screen flex items-center justify-center transition-colors duration-300 ${
         darkMode ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
       }`}
     >
@@ -35,7 +35,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right - Banner Content */}
+        {/* Right - Banner Text */}
         <Banner />
       </div>
     </motion.section>

@@ -94,9 +94,16 @@ const Skills = () => {
     >
       {/* Heading */}
       <div className="relative text-center mb-16">
-        <h2 className="text-4xl font-extrabold uppercase relative z-10">
-          My <span className="text-red-500">Skills</span>
-        </h2>
+        <div className="relative text-center mb-16">
+          <h2 className="text-4xl font-extrabold uppercase relative z-10">
+            My <span className="text-red-500">Skills</span>
+          </h2>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-[100px] md:text-[140px] font-extrabold opacity-10 select-none pointer-events-none">
+              SKILLS
+            </span>
+          </div>
+        </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <span
             className={`text-[100px] md:text-[140px] font-extrabold opacity-10 select-none pointer-events-none ${
