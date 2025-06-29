@@ -1,12 +1,15 @@
+/* eslint-disable no-unused-vars */
 // @ts-nocheck
-import React from "react";
+import React, { useContext } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { FaFacebook, FaLinkedin, FaReact, FaGithub } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFigma } from "react-icons/io5";
-import Lottie from "lottie-react";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 const Banner = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   const [text] = useTypewriter({
     words: ["Frontend Developer.", "React Enthusiast.", "UI Learner."],
     loop: true,
@@ -15,15 +18,40 @@ const Banner = () => {
     delaySpeed: 2000,
   });
 
+  const socialLinks = [
+    {
+      href: "https://www.facebook.com/sojib.ahmed.71271466",
+      Icon: FaFacebook,
+      color: "#1877F2", // Facebook Blue
+    },
+    {
+      href: "https://github.com/sojib-web",
+      Icon: FaGithub,
+      color: "#38BDF8",
+    },
+    {
+      href: "https://www.linkedin.com/in/md-sojib-ali/",
+      Icon: FaLinkedin,
+      color: "#0A66C2", // LinkedIn Blue
+    },
+  ];
+
+  const skillIcons = [
+    { Icon: FaReact, color: "#61DAFB" },
+    { Icon: RiNextjsFill, color: "#38BDF8" },
+    { Icon: RiTailwindCssFill, color: "#38BDF8" },
+    { Icon: IoLogoFigma, color: "#F24E1E" },
+  ];
+
   return (
     <div className="relative w-full lgl:w-1/2 flex flex-col gap-20 z-10">
       {/* Text Section */}
       <div className="flex flex-col gap-5">
         <h4 className="text-lg font-normal">WELCOME TO MY WORLD</h4>
-        <h1 className="text-6xl font-bold text-white">
+        <h1 className="text-6xl font-bold">
           Hi, I’m <span className="text-red-500 capitalize">Sojib Ali</span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-4xl font-bold">
           a <span>{text}</span>
           <Cursor
             cursorColor="#ff014f"
@@ -31,7 +59,11 @@ const Banner = () => {
             cursorStyle="|"
           />
         </h2>
-        <p className="text-base font-bodyFont leading-6 tracking-wide text-gray-300">
+        <p
+          className={`text-base font-bodyFont leading-6 tracking-wide ${
+            darkMode ? "text-gray-300" : "text-gray-700"
+          }`}
+        >
           I’m a junior front-end developer who loves turning ideas into clean,
           responsive websites. With a strong interest in React, Tailwind CSS,
           and UI design, I'm always eager to learn, improve, and collaborate on
@@ -47,30 +79,20 @@ const Banner = () => {
             Find Me On
           </h2>
           <div className="flex gap-4">
-            <a
-              href="https://www.facebook.com/sojib.ahmed.71271466"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-14 h-14 bg-black bg-opacity-25 text-gray-200 text-2xl rounded-md flex items-center justify-center shadow-md cursor-pointer hover:bg-opacity-50 hover:text-red-500 transition duration-300"
-            >
-              <FaFacebook />
-            </a>
-            <a
-              href="https://github.com/sojib-web"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-14 h-14 bg-black bg-opacity-25 text-gray-200 text-2xl rounded-md flex items-center justify-center shadow-md cursor-pointer hover:bg-opacity-50 hover:text-red-500 transition duration-300"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/md-sojib-ali/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-14 h-14 bg-black bg-opacity-25 text-gray-200 text-2xl rounded-md flex items-center justify-center shadow-md cursor-pointer hover:bg-opacity-50 hover:text-red-500 transition duration-300"
-            >
-              <FaLinkedin />
-            </a>
+            {socialLinks.map(({ href, Icon, color, className }, index) => (
+              <a
+                key={index}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-14 h-14 rounded-md flex items-center justify-center shadow-md cursor-pointer transition duration-300 ${
+                  darkMode ? "bg-white bg-opacity-10" : "bg-black bg-opacity-10"
+                } hover:bg-opacity-30 hover:scale-110`}
+                style={color ? { color } : undefined}
+              >
+                <Icon className={className || "text-2xl"} />
+              </a>
+            ))}
           </div>
         </div>
 
@@ -78,16 +100,17 @@ const Banner = () => {
         <div>
           <h2 className="text-base uppercase font-titleFont mb-4">Skills</h2>
           <div className="flex gap-6">
-            {[FaReact, RiNextjsFill, RiTailwindCssFill, IoLogoFigma].map(
-              (Icon, index) => (
-                <span
-                  key={index}
-                  className="w-14 h-14 bg-black bg-opacity-25 text-gray-200 text-2xl rounded-md flex items-center justify-center shadow-md cursor-pointer hover:bg-opacity-50 hover:text-red-500 transition duration-300"
-                >
-                  <Icon />
-                </span>
-              )
-            )}
+            {skillIcons.map(({ Icon, color, className }, index) => (
+              <span
+                key={index}
+                className={`w-14 h-14 rounded-md flex items-center justify-center shadow-md cursor-pointer transition duration-300 ${
+                  darkMode ? "bg-white bg-opacity-10" : "bg-black bg-opacity-10"
+                } hover:bg-opacity-30 hover:scale-110`}
+                style={color ? { color } : undefined}
+              >
+                <Icon className={className || "text-2xl"} />
+              </span>
+            ))}
           </div>
         </div>
       </div>

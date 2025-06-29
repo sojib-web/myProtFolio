@@ -1,5 +1,6 @@
 // @ts-nocheck
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 const skills = {
   Frontend: [
@@ -22,7 +23,7 @@ const skills = {
   ],
 };
 
-const AnimatedRadial = ({ target }) => {
+const AnimatedRadial = ({ target, darkMode }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -44,7 +45,7 @@ const AnimatedRadial = ({ target }) => {
     <div className="relative w-24 h-24">
       <svg className="absolute top-0 left-0 w-full h-full">
         <circle
-          className="text-gray-800"
+          className={darkMode ? "text-gray-800" : "text-gray-300"}
           strokeWidth="6"
           stroke="currentColor"
           fill="transparent"
@@ -66,28 +67,42 @@ const AnimatedRadial = ({ target }) => {
         />
       </svg>
       <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-white font-bold text-sm">{progress}%</span>
+        <span
+          className={`font-bold text-sm ${
+            darkMode ? "text-white" : "text-black"
+          }`}
+        >
+          {progress}%
+        </span>
       </div>
     </div>
   );
 };
 
 const Skills = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
     <section
-      className="text-white py-16 px-6 md:px-12 relative bg-[#0f0f0f] bg-no-repeat bg-cover bg-center"
+      className={`py-16 px-6 md:px-12 relative bg-no-repeat bg-cover bg-center transition-colors duration-300 ${
+        darkMode ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
+      }`}
       style={{
         backgroundImage:
           "url('https://www.transparenttextures.com/patterns/stardust.png')",
       }}
     >
-      {/* Section Heading */}
+      {/* Heading */}
       <div className="relative text-center mb-16">
         <h2 className="text-4xl font-extrabold uppercase relative z-10">
           My <span className="text-red-500">Skills</span>
         </h2>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[100px] md:text-[140px] font-extrabold text-gray-800 opacity-10 select-none pointer-events-none">
+          <span
+            className={`text-[100px] md:text-[140px] font-extrabold opacity-10 select-none pointer-events-none ${
+              darkMode ? "text-gray-800" : "text-gray-300"
+            }`}
+          >
             SKILLS
           </span>
         </div>
@@ -98,7 +113,11 @@ const Skills = () => {
         {Object.entries(skills).map(([category, skillList], i) => (
           <div
             key={i}
-            className="bg-[#181818]/90 p-6 rounded-2xl shadow-lg shadow-black/30"
+            className={`p-6 rounded-2xl shadow-lg transition-all duration-300 ${
+              darkMode
+                ? "bg-[#181818]/90 shadow-black/30"
+                : "bg-gray-100 shadow-gray-300"
+            }`}
           >
             <h3 className="text-xl font-semibold mb-6 border-l-4 border-red-500 pl-4 uppercase">
               {category}
@@ -107,10 +126,18 @@ const Skills = () => {
               {skillList.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center text-center bg-[#0f0f0f] rounded-xl p-4 shadow-inner shadow-black/20 hover:scale-105 transition-transform duration-300"
+                  className={`flex flex-col items-center text-center rounded-xl p-4 shadow-inner hover:scale-105 transition-transform duration-300 ${
+                    darkMode
+                      ? "bg-[#0f0f0f] shadow-black/20"
+                      : "bg-white shadow-gray-200"
+                  }`}
                 >
-                  <AnimatedRadial target={skill.value} />
-                  <span className="mt-4 font-semibold tracking-wide text-sm">
+                  <AnimatedRadial target={skill.value} darkMode={darkMode} />
+                  <span
+                    className={`mt-4 font-semibold tracking-wide text-sm ${
+                      darkMode ? "text-gray-100" : "text-gray-800"
+                    }`}
+                  >
                     {skill.name}
                   </span>
                 </div>

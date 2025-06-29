@@ -1,7 +1,11 @@
+/* eslint-disable no-unused-vars */
 // @ts-nocheck
-import React from "react";
+import React, { useContext } from "react";
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import image from "../assets/gardening-community-client.web.app.png";
+import { DarkModeContext } from "../context/DarkModeContext";
+
 // Project Data Array
 const projects = [
   {
@@ -49,18 +53,32 @@ const projects = [
 ];
 
 const Project = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
-    <section className="bg-[#0f0f0f] text-white py-20 px-4">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -30 }}
+      transition={{ duration: 0.5 }}
+      className={`py-20 px-4 transition-colors duration-300 ${
+        darkMode ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
+      }`}
+    >
       {/* Section Title */}
       <div className="relative text-center mb-16">
         <h2 className="text-4xl font-extrabold uppercase relative z-10">
           My <span className="text-red-500">Projects</span>
         </h2>
-        <p className="text-gray-400 mt-2">
+        <p className={`mt-2 ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
           VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK
         </p>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[100px] md:text-[140px] font-extrabold text-gray-800 opacity-10 select-none pointer-events-none">
+          <span
+            className={`text-[100px] md:text-[140px] font-extrabold opacity-10 select-none pointer-events-none ${
+              darkMode ? "text-gray-800" : "text-gray-300"
+            }`}
+          >
             PROJECT
           </span>
         </div>
@@ -72,7 +90,7 @@ const Project = () => {
           <ProjectCard key={idx} {...project} />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

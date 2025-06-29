@@ -1,43 +1,44 @@
-// @ts-nocheck
-import React from "react";
-import Lottie from "lottie-react";
+import React, { useContext } from "react";
+import { motion } from "framer-motion";
 import profileImage from "../assets/pic.png";
 import Banner from "../Banner/Banner";
-
-// Animation imports
-// import topLeftAnimation from "../assets/Animation.json";
-// import bottomRightAnimation from "../assets/Animation.json";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 const Home = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
-    <section className="min-h-screen bg-[#0f0f0f] text-white relative flex items-center justify-center pl-20 md:pl-32">
-      <div className="max-w-7xl w-full grid md:grid-cols-2 px-6 gap-10 items-center z-0">
-        {/* Left - Image with Animations */}
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+      transition={{ duration: 0.5 }}
+      className={`flex items-center justify-center pt-10 pb-28 md:pt-20 md:pb-10 transition-colors duration-300 ${
+        darkMode ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
+      }`}
+    >
+      <div className="max-w-7xl w-full grid md:grid-cols-2 px-4 sm:px-6 lg:px-8 gap-10 items-center">
+        {/* Left - Image */}
         <div className="relative rounded-xl overflow-hidden">
-          {/* Top Left Animation */}
-          {/* <div className="absolute -top-10 -left-10 w-32 h-32 z-100 pointer-events-none">
-            <Lottie animationData={topLeftAnimation} loop={true} />
-          </div> */}
-
-          {/* Bottom Right Animation */}
-          {/* <div className="absolute -bottom-100 -right-30 w-32 h-32 z-0 pointer-events-none">
-            <Lottie animationData={bottomRightAnimation} loop={true} />
-          </div> */}
-
-          {/* Image Container */}
-          <div className="relative z-10 m-2 bg-[#0f0f0f] rounded-xl p-2 border border-gray-400">
+          <div
+            className={`relative m-2 rounded-xl p-2 border transition-colors duration-300 ${
+              darkMode
+                ? "bg-[#0f0f0f] border-gray-600"
+                : "bg-white border-gray-300"
+            }`}
+          >
             <img
               src={profileImage}
               alt="profile"
-              className="rounded-xl object-cover w-full h-[600px]"
+              className="rounded-xl object-cover w-full h-auto max-h-[600px]"
             />
           </div>
         </div>
 
-        {/* Right - Text Content */}
+        {/* Right - Banner Content */}
         <Banner />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 // Experience Data
 const experience = [
@@ -26,7 +27,7 @@ const experience = [
 // Education Data
 const education = [
   {
-    date: "2024", // Replace with your actual graduation year if different
+    date: "2024",
     title: "B.Sc. in Computer Science & Engineering",
     company: "Daffodil International University (DIU)",
     desc: "Completed Bachelor of Science in Computer Science & Engineering. Gained strong foundational and practical knowledge in frontend development, data structures, algorithms, and web technologies.",
@@ -45,8 +46,12 @@ const education = [
   },
 ];
 
-const TimelineCard = ({ item, isEducation }) => (
-  <div className="relative pl-12 border-l border-gray-700">
+const TimelineCard = ({ item, isEducation, darkMode }) => (
+  <div
+    className={`relative pl-12 border-l ${
+      darkMode ? "border-gray-700" : "border-gray-300"
+    }`}
+  >
     {/* Icon */}
     <div className="absolute left-[-1.25rem] top-1 w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
       {isEducation ? (
@@ -57,29 +62,57 @@ const TimelineCard = ({ item, isEducation }) => (
     </div>
 
     <div className="mb-10">
-      <span className="text-xs bg-gray-700 text-white px-2 py-1 rounded-full font-medium">
+      <span
+        className={`text-xs px-2 py-1 rounded-full font-medium ${
+          darkMode ? "bg-gray-700 text-white" : "bg-gray-200 text-gray-800"
+        }`}
+      >
         {item.date}
       </span>
-      <h3 className="text-white text-lg font-bold mt-2">
+      <h3
+        className={`text-lg font-bold mt-2 ${
+          darkMode ? "text-white" : "text-gray-900"
+        }`}
+      >
         {item.title}{" "}
-        <span className="text-sm font-semibold text-gray-400">
+        <span
+          className={`text-sm font-semibold ${
+            darkMode ? "text-gray-400" : "text-gray-600"
+          }`}
+        >
           — {item.company}
         </span>
       </h3>
-      <p className="text-sm text-gray-400 mt-2">{item.desc}</p>
+      <p
+        className={`text-sm mt-2 ${
+          darkMode ? "text-gray-400" : "text-gray-700"
+        }`}
+      >
+        {item.desc}
+      </p>
     </div>
   </div>
 );
 
 const ExperienceEducation = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
-    <section className="py-16  text-white px-4 sm:px-6 lg:px-12">
+    <section
+      className={`py-16 px-4 sm:px-6 lg:px-12 transition-colors duration-300 ${
+        darkMode ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
+      }`}
+    >
       <div className="relative text-center mb-16">
         <h2 className="text-4xl font-extrabold uppercase relative z-10">
           Experience <span className="text-red-500"> & Education</span>
         </h2>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[100px] md:text-[140px] font-extrabold text-gray-800 opacity-10 select-none pointer-events-none">
+          <span
+            className={`text-[100px] md:text-[140px] font-extrabold opacity-10 select-none pointer-events-none ${
+              darkMode ? "text-gray-800" : "text-gray-300"
+            }`}
+          >
             Education
           </span>
         </div>
@@ -89,12 +122,22 @@ const ExperienceEducation = () => {
       <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
         <div>
           {experience.map((item, idx) => (
-            <TimelineCard key={idx} item={item} isEducation={false} />
+            <TimelineCard
+              key={idx}
+              item={item}
+              isEducation={false}
+              darkMode={darkMode}
+            />
           ))}
         </div>
         <div>
           {education.map((item, idx) => (
-            <TimelineCard key={idx} item={item} isEducation={true} />
+            <TimelineCard
+              key={idx}
+              item={item}
+              isEducation={true}
+              darkMode={darkMode}
+            />
           ))}
         </div>
       </div>

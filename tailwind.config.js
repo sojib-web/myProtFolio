@@ -1,8 +1,6 @@
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
-  darkMode: "class", // এইটা খুব গুরুত্বপূর্ণ!
-  theme: {
-    extend: {},
-  },
+  darkMode: "class", // important!
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: { extend: {} },
   plugins: [],
 };
