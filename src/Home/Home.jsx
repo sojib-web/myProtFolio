@@ -16,6 +16,10 @@ const Home = () => {
       className={`min-h-screen flex items-center justify-center transition-colors duration-300 ${
         darkMode ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
       }`}
+      style={{
+        backgroundImage:
+          "url('https://www.transparenttextures.com/patterns/stardust.png')",
+      }}
     >
       <div className="max-w-7xl w-full grid md:grid-cols-2 px-4 sm:px-6 lg:px-8 gap-10 items-center">
         {/* Left - Image */}

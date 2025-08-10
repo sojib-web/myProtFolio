@@ -25,7 +25,7 @@ const About = () => {
       {/* Grid Layout with Personal Info + Stats */}
       {/* Skills and ExperienceEducation Sections */}
       {/* ... */}
-      <Skills />
+      {/* <Skills /> */}
       <ExperienceEducation />
     </motion.section>
   );

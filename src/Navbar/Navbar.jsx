@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router";
-import { Home, User, Briefcase, Mail, Sun, Moon } from "lucide-react";
+import { Home, User, Briefcase, Mail, Sun, Moon, Code } from "lucide-react";
 import { DarkModeContext } from "../context/DarkModeContext";
 
 const navItems = [
   { to: "/", icon: <Home className="w-5 h-5" />, label: "Home" },
   { to: "/about", icon: <User className="w-5 h-5" />, label: "About" },
   { to: "/portfolio", icon: <Briefcase className="w-5 h-5" />, label: "Work" },
+  { to: "/skills", icon: <Code className="w-5 h-5" />, label: "Skills" }, // নতুন আইটেম
   { to: "/contact", icon: <Mail className="w-5 h-5" />, label: "Contact" },
 ];
 

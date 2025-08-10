@@ -2,7 +2,13 @@
 // @ts-nocheck
 import React, { useContext } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { FaFacebook, FaLinkedin, FaReact, FaGithub } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaReact,
+  FaGithub,
+  FaPaperPlane,
+} from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFigma } from "react-icons/io5";
 import { DarkModeContext } from "../context/DarkModeContext";
@@ -11,7 +17,11 @@ const Banner = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   const [text] = useTypewriter({
-    words: ["Frontend Developer.", "React Enthusiast.", "UI Learner."],
+    words: [
+      "Full Stack Developer.",
+      "React & Next.js Enthusiast.",
+      "UI Learner.",
+    ],
     loop: true,
     typeSpeed: 20,
     deleteSpeed: 10,
@@ -22,7 +32,7 @@ const Banner = () => {
     {
       href: "https://www.facebook.com/sojib.ahmed.71271466",
       Icon: FaFacebook,
-      color: "#1877F2", // Facebook Blue
+      color: "#1877F2",
     },
     {
       href: "https://github.com/sojib-web",
@@ -32,7 +42,7 @@ const Banner = () => {
     {
       href: "https://www.linkedin.com/in/md-sojib-ali/",
       Icon: FaLinkedin,
-      color: "#0A66C2", // LinkedIn Blue
+      color: "#0A66C2",
     },
   ];
 
@@ -64,11 +74,40 @@ const Banner = () => {
             darkMode ? "text-gray-300" : "text-gray-700"
           }`}
         >
-          I’m a junior front-end developer who loves turning ideas into clean,
-          responsive websites. With a strong interest in React, Tailwind CSS,
-          and UI design, I'm always eager to learn, improve, and collaborate on
-          real-world projects.
+          I’m Sojib, a passionate Full Stack Developer skilled in React,
+          Next.js, Node.js, Express.js, MongoDB, WordPress, and modern UI
+          frameworks like Tailwind CSS & Bootstrap.
+          <br />I have 2 months of professional experience at{" "}
+          <a
+            href="https://www.facebook.com/softexellbd/"
+            className="text-red-500 font-bold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            softexel
+          </a>
+          , building dynamic and scalable web solutions. I love crafting clean,
+          responsive, and SEO-friendly applications that deliver great user
+          experiences.
         </p>
+
+        {/* Resume Button */}
+        <a
+          href="/resume.pdf"
+          download
+          className={`relative group flex items-center justify-between w-56 h-12 px-6 py-3 rounded-full border font-semibold overflow-hidden transition-all duration-300 ${
+            darkMode
+              ? "border-red-500 text-white hover:shadow-[0_0_10px_#ef4444]"
+              : "border-red-500 text-black hover:text-white hover:shadow-[0_0_10px_#ef4444]"
+          }`}
+        >
+          <span className="z-10"> Download Resume</span>
+          <span
+            className={`absolute right-0 top-0 h-full aspect-square bg-red-500 rounded-full flex items-center justify-center group-hover:scale-105`}
+          >
+            <FaPaperPlane className="text-white" />
+          </span>
+        </a>
       </div>
 
       {/* Social & Skills Section */}
