@@ -31,7 +31,7 @@ const ProjectDetails = () => {
     return (
       <div
         className={`text-center py-20 min-h-screen ${
-          darkMode ? "text-white bg-[#0f0f0f]" : "text-black bg-[#0f0f0f]"
+          darkMode ? "text-white bg-[#0f0f0f]" : "text-black bg-white"
         }`}
       >
         <h2 className="text-3xl font-bold">Project Not Found!</h2>
@@ -88,12 +88,12 @@ const ProjectDetails = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -30 }}
           transition={{ duration: 0.5 }}
-          className={`flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 transition-colors  bg-[#0f0f0f]duration-300 ${
-            darkMode ? "bg-black " : "bg-white text-black"
+          className={`flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 transition-colors ${
+            darkMode ? "bg-black text-gray-300" : "bg-white text-black"
           } rounded-lg shadow-lg`}
         >
           {/* Left content */}
-          <div className="flex-1 max-w-full md:max-w-xl px-2 md:px-0">
+          <div className="flex-1 w-full max-w-full md:max-w-xl px-2 md:px-0">
             {/* Project ID */}
             <p
               className={`text-2xl md:text-3xl leading-relaxed font-medium tracking-wide mb-4 md:mb-6 font-mono ${
@@ -188,13 +188,14 @@ const ProjectDetails = () => {
               }}
               loop={true}
               className="custom-swiper"
+              style={{ width: "100%", height: "auto" }}
             >
               {images.map((img, index) => (
                 <SwiperSlide key={index}>
                   <img
                     src={img}
                     alt={`${project.title} - ${index + 1}`}
-                    className="project-image"
+                    className="project-image w-full object-contain rounded-lg cursor-pointer"
                     onClick={() => setSelectedImage(img)}
                   />
                 </SwiperSlide>
@@ -204,7 +205,7 @@ const ProjectDetails = () => {
             {/* Custom navigation buttons */}
             <div className="absolute bottom-4 right-4 flex gap-3 z-10">
               <button
-                className="custom-prev nav-btn"
+                className="custom-prev nav-btn p-2 rounded-full bg-red-500 text-white shadow-lg hover:bg-red-600 focus:outline-none"
                 aria-label="Previous slide"
               >
                 <svg
@@ -217,11 +218,16 @@ const ProjectDetails = () => {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    strokeWidth={2}
+                    stroke="currentColor"
                     d="M15 19l-7-7 7-7"
                   />
                 </svg>
               </button>
-              <button className="custom-next nav-btn" aria-label="Next slide">
+              <button
+                className="custom-next nav-btn p-2 rounded-full bg-red-500 text-white shadow-lg hover:bg-red-600 focus:outline-none"
+                aria-label="Next slide"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -232,6 +238,8 @@ const ProjectDetails = () => {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    strokeWidth={2}
+                    stroke="currentColor"
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
@@ -249,7 +257,7 @@ const ProjectDetails = () => {
             <motion.img
               src={selectedImage}
               alt="Full view"
-              className="modal-image"
+              className="modal-image max-w-full max-h-[90vh] rounded-lg"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.3 }}
