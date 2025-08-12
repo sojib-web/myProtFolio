@@ -89,7 +89,7 @@ const ProjectDetails = () => {
           exit={{ opacity: 0, y: -30 }}
           transition={{ duration: 0.5 }}
           className={`flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 transition-colors  bg-[#0f0f0f]duration-300 ${
-            darkMode ? "bg-black text-green-400" : "bg-white text-black"
+            darkMode ? "bg-black " : "bg-white text-black"
           } rounded-lg shadow-lg`}
         >
           {/* Left content */}

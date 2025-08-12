@@ -4,11 +4,11 @@ import { Home, User, Briefcase, Mail, Sun, Moon, Code } from "lucide-react";
 import { DarkModeContext } from "../context/DarkModeContext";
 
 const navItems = [
-  { to: "/", icon: <Home className="w-6 h-6" />, label: "Home" },
-  { to: "/about", icon: <User className="w-6 h-6" />, label: "About" },
-  { to: "/portfolio", icon: <Briefcase className="w-6 h-6" />, label: "Work" },
-  { to: "/skills", icon: <Code className="w-6 h-6" />, label: "Skills" },
-  { to: "/contact", icon: <Mail className="w-6 h-6" />, label: "Contact" },
+  { to: "/", icon: <Home />, label: "Home" },
+  { to: "/about", icon: <User />, label: "About" },
+  { to: "/portfolio", icon: <Briefcase />, label: "Work" },
+  { to: "/skills", icon: <Code />, label: "Skills" },
+  { to: "/contact", icon: <Mail />, label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -56,7 +56,9 @@ const Navbar = () => {
               }
               title={label}
             >
-              {icon}
+              {React.cloneElement(icon, {
+                className: `w-6 h-6 ${darkMode ? "text-white" : "text-black"}`,
+              })}
             </NavLink>
           ))}
         </div>
@@ -85,7 +87,9 @@ const Navbar = () => {
             }
             title={label}
           >
-            {icon}
+            {React.cloneElement(icon, {
+              className: `w-6 h-6 ${darkMode ? "text-white" : "text-black"}`,
+            })}
           </NavLink>
         ))}
 

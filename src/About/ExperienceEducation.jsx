@@ -99,7 +99,7 @@ const Introduction = () => {
   return (
     <section
       className={`max-w-7xl mx-auto py-14 px-6 sm:px-10 lg:px-12 transition-colors duration-300 rounded-md shadow-lg mb-20 ${
-        darkMode ? "bg-[#111111] text-white" : "bg-white text-gray-900"
+        darkMode ? "bg-black text-white" : "bg-white text-gray-900"
       }`}
     >
       {/* <div className="relative text-center mb-12">
@@ -169,7 +169,7 @@ const ExperienceEducation = () => {
       <Introduction />
       <section
         className={`py-16 px-6 sm:px-10 lg:px-12 transition-colors duration-300 rounded-md shadow-lg max-w-7xl mx-auto ${
-          darkMode ? "bg-[#111111] text-white" : "bg-white text-gray-900"
+          darkMode ? "bg-black text-white" : "bg-white text-gray-900"
         }`}
       >
         {/* <div className="relative text-center mb-20">
