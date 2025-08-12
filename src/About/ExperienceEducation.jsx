@@ -108,7 +108,13 @@ const Introduction = () => {
           My Programming <span className="text-red-500">Journey</span>
         </h2>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[100px] md:text-[140px] font-extrabold opacity-10 select-none pointer-events-none">
+          <span
+            className="font-extrabold opacity-10 select-none pointer-events-none"
+            style={{
+              fontSize: "clamp(3rem, 10vw, 9rem)", // dynamically scales from 48px to 144px roughly
+              lineHeight: 1,
+            }}
+          >
             JOURNEY
           </span>
         </div>
@@ -163,8 +169,14 @@ const ExperienceEducation = () => {
             Experience <span className="text-red-500">& Education</span>
           </h2>
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-[100px] md:text-[140px] font-extrabold opacity-10 select-none pointer-events-none">
-              EDUCATION
+            <span
+              className="font-extrabold opacity-10 select-none pointer-events-none"
+              style={{
+                fontSize: "clamp(3rem, 10vw, 9rem)", // dynamically scales from 48px to 144px roughly
+                lineHeight: 1,
+              }}
+            >
+              Education
             </span>
           </div>
         </div>
