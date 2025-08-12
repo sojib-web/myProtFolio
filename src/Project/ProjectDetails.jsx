@@ -96,7 +96,7 @@ const ProjectDetails = () => {
           <div className="flex-1 max-w-full md:max-w-xl px-2 md:px-0">
             {/* Project ID */}
             <p
-              className={`text-sm md:text-base font-bodyFont leading-5 md:leading-6 tracking-wide mb-1 md:mb-2 ${
+              className={`text-2xl md:text-3xl leading-relaxed font-medium tracking-wide mb-4 md:mb-6 font-mono ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >

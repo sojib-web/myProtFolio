@@ -1,5 +1,6 @@
 // @ts-nocheck
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
+import { motion } from "framer-motion";
 import { DarkModeContext } from "../context/DarkModeContext";
 
 const skills = {
@@ -25,9 +26,9 @@ const skills = {
 };
 
 const AnimatedRadial = ({ target, darkMode }) => {
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = React.useState(0);
 
-  useEffect(() => {
+  React.useEffect(() => {
     let value = 0;
     const speed = 15;
     const animate = () => {
@@ -84,7 +85,11 @@ const Skills = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -30 }}
+      transition={{ duration: 0.5 }}
       className={`py-16 px-6 md:px-12 relative bg-no-repeat bg-cover bg-center transition-colors duration-300 ${
         darkMode ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
       }`}
@@ -147,7 +152,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
