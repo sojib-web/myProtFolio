@@ -54,7 +54,11 @@ const Banner = () => {
   ];
 
   return (
-    <div className="relative w-full lgl:w-1/2 flex flex-col gap-20 z-10">
+    <div
+      className={`relative w-full lgl:w-1/2 flex flex-col gap-20 z-10
+        pb-20 md:pb-0
+      `}
+    >
       {/* Text Section */}
       <div className="flex flex-col gap-5">
         <h4 className="text-lg font-normal">WELCOME TO MY WORLD</h4>
@@ -111,9 +115,9 @@ const Banner = () => {
       </div>
 
       {/* Social & Skills Section */}
-      <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between relative z-10">
+      <div className="flex flex-col xl:flex-row gap-8 lgl:gap-0 justify-between relative z-10">
         {/* Social Links */}
-        <div>
+        <div className="mb-8 xl:mb-0">
           <h2 className="text-base uppercase font-titleFont mb-4">
             Find Me On
           </h2>
