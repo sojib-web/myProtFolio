@@ -31,7 +31,7 @@ const ProjectDetails = () => {
     return (
       <div
         className={`text-center py-20 min-h-screen ${
-          darkMode ? "text-white bg-[#0f0f0f]" : "text-black bg-[#0f0f0f]"
+          darkMode ? "text-white bg-[#0f0f0f]" : "text-black bg-white"
         }`}
       >
         <h2 className="text-3xl font-bold">Project Not Found!</h2>
