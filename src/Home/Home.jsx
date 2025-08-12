@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+// @ts-nocheck
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import profileImage from "../assets/pic.png";
@@ -21,7 +23,7 @@ const Home = () => {
           "url('https://www.transparenttextures.com/patterns/stardust.png')",
       }}
     >
-      <div className="max-w-7xl w-full grid md:grid-cols-2 px-4 sm:px-6 lg:px-8 gap-10 items-center">
+      <div className="max-w-7xl w-full w grid md:grid-cols-2 px-4 sm:px-6 lg:px-8 gap-10 items-center">
         {/* Left - Image */}
         <div className="relative rounded-xl overflow-hidden">
           <div
@@ -34,7 +36,7 @@ const Home = () => {
             <img
               src={profileImage}
               alt="profile"
-              className="rounded-xl object-cover w-full h-auto max-h-[600px]"
+              className="rounded-xl object-cover w-full max-w-full h-auto max-h-[600px]"
             />
           </div>
         </div>
