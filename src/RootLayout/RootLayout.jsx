@@ -10,21 +10,23 @@ const RootLayout = () => {
 
   return (
     <div
-      className={`flex min-h-screen transition-colors duration-300 ${
+      className={`flex flex-col min-h-screen transition-colors duration-300 ${
         darkMode ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
-      }`}
+      } sm:flex-row`}
     >
-      {/* Fixed Sidebar */}
+      {/* মোবাইলে নিচে, বড় স্ক্রিনে বামে Navbar */}
       <div
-        className={`fixed top-0 left-0 z-50 h-full w-20 transition-colors duration-300 ${
-          darkMode ? "bg-[#0f0f0f]" : "bg-white"
-        } hidden sm:flex`}
+        className={`fixed bottom-0 left-0 right-0 z-50 h-16 w-full border-t transition-colors duration-300
+        ${
+          darkMode ? "bg-[#0f0f0f] border-gray-700" : "bg-white border-gray-200"
+        }
+        sm:static sm:h-full sm:w-20 sm:border-t-0 sm:border-r`}
       >
         <Navbar />
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 ml-0 sm:ml-20 overflow-y-auto transition-colors duration-300">
+      <div className="flex-1 pt-0 pb-16 sm:pt-0 sm:pb-0 sm:ml-20 overflow-y-auto transition-colors duration-300">
         <AnimatePresence mode="wait">
           <Outlet key={location.pathname} />
         </AnimatePresence>
