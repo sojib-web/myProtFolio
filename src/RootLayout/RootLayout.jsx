@@ -18,13 +18,13 @@ const RootLayout = () => {
       <div
         className={`fixed top-0 left-0 z-50 h-full w-20 transition-colors duration-300 ${
           darkMode ? "bg-[#0f0f0f]" : "bg-white"
-        }`}
+        } hidden sm:flex`}
       >
         <Navbar />
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 ml-20 overflow-y-auto transition-colors duration-300">
+      <div className="flex-1 ml-0 sm:ml-20 overflow-y-auto transition-colors duration-300">
         <AnimatePresence mode="wait">
           <Outlet key={location.pathname} />
         </AnimatePresence>
