@@ -48,7 +48,7 @@ const Contact = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -30 }}
       transition={{ duration: 0.5 }}
-      className={`min-h-screen py-20 px-4 transition-colors duration-300 ${
+      className={`min-h-screen py-20 px-4 sm:px-6 lg:px-12 transition-colors duration-300 ${
         darkMode ? "bg-[#0f0f0f] text-white" : "bg-white text-gray-900"
       }`}
     >
@@ -61,17 +61,21 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="relative text-center mb-16">
-          <h2 className="text-4xl font-extrabold uppercase relative z-10">
+          <h2 className="text-4xl sm:text-5xl font-extrabold uppercase relative z-10">
             GET IN <span className="text-red-500">TOUCH</span>
           </h2>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-[100px] md:text-[140px] font-extrabold opacity-10 select-none pointer-events-none">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+            {/* Responsive background text with clamp for smooth scaling */}
+            <span
+              className="font-extrabold opacity-10"
+              style={{ fontSize: "clamp(3rem, 10vw, 9rem)", lineHeight: 1 }}
+            >
               CONTACT
             </span>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 relative z-10 mt-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10 mt-16 sm:mt-20">
           {/* Left Info */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold">DON'T BE SHY!</h3>
@@ -179,7 +183,7 @@ const Contact = () => {
                 name="user_name"
                 placeholder="Your Name"
                 required
-                className={`px-4 py-3 rounded-full text-sm outline-none ${
+                className={`px-4 py-3 rounded-full text-sm outline-none w-full ${
                   darkMode
                     ? "bg-[#1e1e1e] text-white placeholder-gray-500"
                     : "bg-gray-100 text-black placeholder-gray-500"
@@ -190,7 +194,7 @@ const Contact = () => {
                 name="user_email"
                 placeholder="Your Email"
                 required
-                className={`px-4 py-3 rounded-full text-sm outline-none ${
+                className={`px-4 py-3 rounded-full text-sm outline-none w-full ${
                   darkMode
                     ? "bg-[#1e1e1e] text-white placeholder-gray-500"
                     : "bg-gray-100 text-black placeholder-gray-500"
@@ -221,7 +225,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className={`relative group flex items-center justify-between w-56 h-12 px-6 py-3 rounded-full border font-semibold overflow-hidden transition-all duration-300 ${
+              className={`relative group flex items-center justify-between w-full sm:w-56 h-12 px-6 py-3 rounded-full border font-semibold overflow-hidden transition-all duration-300 ${
                 darkMode
                   ? "border-red-500 text-white hover:shadow-[0_0_10px_#ef4444]"
                   : "border-red-500 text-black hover:text-white hover:shadow-[0_0_10px_#ef4444]"
