@@ -1,0 +1,105 @@
+[
+  {
+    "id": 0,
+    "title": "Gardening Community",
+    "des": "An engaging social platform designed to help gardening lovers share tips, collaborate on projects, and inspire each other with innovative gardening ideas.",
+    "techStack": "React, Firebase, Express, MongoDB",
+    "challenges": "Implementing real-time data sync and user authentication.",
+    "improvements": "Add mobile app and AI-based gardening tips.",
+    "codeLink": "https://github.com/sojib-web",
+    "liveLink": "https://gardening-community-client.web.app/",
+
+    "images": [
+      "https://i.ibb.co/1JbNs2Qw/gardening-community-client-web-app.png",
+      "https://i.ibb.co/fGFVHHLG/gardening-community-client-web-app-2.png",
+      "https://i.ibb.co/k68yWLP7/gardening-community-client-web-app-gardeners-List.png",
+      "https://i.ibb.co/PGMWDZ01/gardening-community-client-web-app-signup.png"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Service Review System",
+    "des": "A responsive web application to add, view, and manage service reviews with secure authentication and user-friendly interface.",
+    "techStack": "React, Express, MongoDB, JWT",
+    "challenges": "Secure JWT auth and efficient data filtering.",
+    "improvements": "Admin dashboard and review analytics.",
+    "codeLink": "https://github.com/sojib-web/reaheck-assignment-11",
+    "liveLink": "https://service-review-system-a221e.web.app/",
+    "images": [
+      "https://i.ibb.co/qMPL09py/service-review-system-a221e-web-app.png",
+      "https://i.ibb.co/8Ly4Q6fX/service-review-system-a221e-web-app-all-Services.png",
+      "https://i.ibb.co/F4vnt4ry/service-review-system-a221e-web-app-services.png",
+      "https://i.ibb.co/Q77KStQ5/service-review-system-a221e-web-app-services-1.png",
+      "https://i.ibb.co/JRy9vZvs/service-review-system-a221e-web-app-services-2.png"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "LoveKnot Matchmaking",
+    "des": "A user-friendly matchmaking service that helps people find compatible partners through detailed profiles, smart filters, and secure communication, developed using React and Node.js.",
+    "techStack": "React, Node.js, Firebase, Stripe, MongoDB",
+    "challenges": "Role-based access control and payment integration.",
+    "improvements": "AI matchmaking and UI improvements.",
+    "codeLink": "https://github.com/Programming-Hero-Web-Course4/b11a12-client-side-sojib-web",
+    "liveLink": "https://loveknot-f6d02.web.app/",
+    "images": [
+      "https://i.ibb.co/4gpKzjyW/loveknot-f6d02-web-app.png",
+      "https://i.ibb.co/cS6CVm6G/loveknot-f6d02-web-app-biodatas-1.png",
+      "https://i.ibb.co/Tq1xFdR3/loveknot-f6d02-web-app-biodatas-2.png",
+      "https://i.ibb.co/pv6FsqxT/loveknot-f6d02-web-app-biodatas-3.png",
+      "https://i.ibb.co/7tGqfNX2/loveknot-f6d02-web-app-biodatas-4.png",
+      "https://i.ibb.co/4gC3Xx9m/loveknot-f6d02-web-app-biodatas-5.png"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Fitness Tracker",
+    "des": "Track workouts, calories, and progress with dynamic charts.",
+    "techStack": "React, Chart.js, CSS",
+    "challenges": "Real-time progress updates and chart rendering.",
+    "improvements": "Add social sharing and mobile support.",
+    "codeLink": "https://github.com/sojib-web/fitness-tracker",
+    "liveLink": "https://fitness-sojib.netlify.app",
+    "images": [
+      "https://i.ibb.co/FqVYZbbh/image.png",
+      "https://i.ibb.co/8Ly4Q6fX/service-review-system-a221e-web-app-all-Services.png",
+      "https://i.ibb.co/F4vnt4ry/service-review-system-a221e-web-app-services.png",
+      "https://i.ibb.co/Q77KStQ5/service-review-system-a221e-web-app-services-1.png",
+      "https://i.ibb.co/JRy9vZvs/service-review-system-a221e-web-app-services-2.png"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Marketing Site",
+    "des": "Landing page for SEO and digital marketing campaigns.",
+    "techStack": "React, Tailwind CSS, Netlify",
+    "challenges": "Optimizing page load speed and SEO.",
+    "improvements": "Add blog and newsletter integration.",
+    "codeLink": "https://github.com/sojib-web/marketing-site",
+    "liveLink": "https://marketing-sojib.netlify.app",
+    "images": [
+      "https://i.ibb.co/FqVYZbbh/image.png",
+      "https://i.ibb.co/8Ly4Q6fX/service-review-system-a221e-web-app-all-Services.png",
+      "https://i.ibb.co/F4vnt4ry/service-review-system-a221e-web-app-services.png",
+      "https://i.ibb.co/Q77KStQ5/service-review-system-a221e-web-app-services-1.png",
+      "https://i.ibb.co/JRy9vZvs/service-review-system-a221e-web-app-services-2.png"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Portfolio Website",
+    "des": "A personal portfolio showcasing projects, skills, and contact information with responsive design.",
+    "techStack": "React, Framer Motion, CSS Modules",
+    "challenges": "Creating smooth animations and responsive layouts.",
+    "improvements": "Add blog section and dark mode toggle.",
+    "codeLink": "https://github.com/sojib-web/portfolio-website",
+    "liveLink": "https://sojib-portfolio.netlify.app",
+    "images": [
+      "https://i.ibb.co/FqVYZbbh/image.png",
+      "https://i.ibb.co/8Ly4Q6fX/service-review-system-a221e-web-app-all-Services.png",
+      "https://i.ibb.co/F4vnt4ry/service-review-system-a221e-web-app-services.png",
+      "https://i.ibb.co/Q77KStQ5/service-review-system-a221e-web-app-services-1.png",
+      "https://i.ibb.co/JRy9vZvs/service-review-system-a221e-web-app-services-2.png"
+    ]
+  }
+]

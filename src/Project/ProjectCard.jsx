@@ -3,7 +3,7 @@ import { FaGithub, FaGlobe } from "react-icons/fa";
 import { DarkModeContext } from "../context/DarkModeContext";
 import { Link } from "react-router";
 
-const ProjectCard = ({ image, title, des, codeLink, liveLink, id }) => {
+const ProjectCard = ({ images, title, des, codeLink, liveLink, id }) => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
@@ -20,7 +20,7 @@ const ProjectCard = ({ image, title, des, codeLink, liveLink, id }) => {
       {/* Image */}
       <div className="overflow-hidden rounded-t-2xl">
         <img
-          src={image}
+          src={images}
           alt={title}
           className="w-full h-40 sm:h-48 md:h-56 object-cover rounded-t-2xl transition-transform duration-500 group-hover:scale-110"
         />

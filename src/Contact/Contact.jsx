@@ -13,6 +13,7 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { DarkModeContext } from "../context/DarkModeContext";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const Contact = () => {

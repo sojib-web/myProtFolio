@@ -6,6 +6,8 @@ import About from "../About/About";
 import Project from "../Project/Project";
 import Contact from "../Contact/Contact";
 import Skills from "../About/Skills";
+import ProjectDetails from "../Project/ProjectDetails";
+// import ProjectDetails from "../Project/ProjectDetails";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +33,11 @@ export const router = createBrowserRouter([
       {
         path: "/skills",
         Component: Skills,
+      },
+
+      {
+        path: "/project/:id",
+        Component: ProjectDetails,
       },
     ],
   },
