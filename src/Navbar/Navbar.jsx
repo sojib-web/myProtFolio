@@ -19,8 +19,10 @@ const Navbar = () => {
       {/* Desktop Sidebar */}
       <nav
         className={`hidden md:flex h-screen w-20 flex-col items-center py-6 fixed left-0 top-0 z-50 transition-colors duration-300 ${
-          darkMode ? "bg-[#0f0f0f]" : "bg-white"
-        } shadow-lg`}
+          darkMode
+            ? "bg-[#0f0f0f] shadow-lg shadow-black/70"
+            : "bg-white shadow-lg shadow-gray-400/40"
+        }`}
       >
         {/* Theme Toggle */}
         <button
@@ -63,8 +65,10 @@ const Navbar = () => {
       {/* Mobile Bottom Navbar */}
       <nav
         className={`md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-3 z-50 transition-colors duration-300 ${
-          darkMode ? "bg-[#0f0f0f]" : "bg-white"
-        } shadow-t-md`}
+          darkMode
+            ? "bg-[#0f0f0f] shadow-lg shadow-black/70"
+            : "bg-white shadow-lg shadow-gray-400/40"
+        }`}
       >
         {navItems.map(({ to, icon, label }, index) => (
           <NavLink
