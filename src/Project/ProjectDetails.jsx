@@ -55,14 +55,10 @@ const ProjectDetails = () => {
           darkMode ? "bg-[#0f0f0f] text-gray-300" : "bg-white text-black"
         }`}
       >
-        {/* Header Section */}
-        <div
-          className={`relative text-center mb-16 py-16 px-6 md:px-12 ${
-            darkMode ? "bg-[#0f0f0f]" : "bg-white"
-          }`}
-        >
-          <h2 className="text-5xl font-extrabold uppercase relative z-10">
-            Explore <span className="text-red-500">My Projects</span>
+        {/* Heading */}
+        <div className="relative text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-extrabold uppercase relative z-10">
+            Explore<span className="text-red-500">My Projects</span>
           </h2>
           <p
             className={`mt-4 text-lg font-medium ${
@@ -72,10 +68,10 @@ const ProjectDetails = () => {
             Check out my portfolio and share your feedback!
           </p>
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+            {/* Responsive background text with clamp for smooth scaling */}
             <span
-              className={`text-[100px] md:text-[140px] font-extrabold opacity-10 ${
-                darkMode ? "text-gray-800" : "text-gray-300"
-              }`}
+              className="font-extrabold opacity-10"
+              style={{ fontSize: "clamp(4rem, 8vw, 7rem)", lineHeight: 1 }}
             >
               PROJECTS
             </span>
