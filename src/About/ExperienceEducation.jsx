@@ -52,7 +52,7 @@ const TimelineCard = ({ item, isEducation, darkMode }) => (
       darkMode ? "border-red-600" : "border-red-400"
     } mb-10`}
   >
-    {/* Icon */}
+    {/* Icon Circle */}
     <div className="absolute left-[-1.9rem] sm:left-[-2.3rem] md:left-[-2rem] top-0 w-12 h-12 sm:w-14 sm:h-14 md:w-12 md:h-12 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
       {isEducation ? (
         <FaGraduationCap className="w-6 sm:w-7 md:w-6 h-6 sm:h-7 md:h-6 text-white" />
@@ -61,6 +61,7 @@ const TimelineCard = ({ item, isEducation, darkMode }) => (
       )}
     </div>
 
+    {/* Content */}
     <div>
       <span
         className={`inline-block text-xs sm:text-sm font-semibold px-3 py-1 rounded-full mb-2 ${
@@ -102,21 +103,6 @@ const Introduction = () => {
         darkMode ? "bg-black text-white" : "bg-white text-gray-900"
       }`}
     >
-      {/* <div className="relative text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl font-extrabold uppercase relative z-10 tracking-wide">
-          My Programming <span className="text-red-500">Journey</span>
-        </h2>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-          <span
-            className={`text-[72px] sm:text-[96px] md:text-[130px] font-extrabold opacity-10 ${
-              darkMode ? "text-red-900" : "text-red-200"
-            }`}
-          >
-            Journey
-          </span>
-        </div>
-      </div> */}
-
       <div className="relative text-center mb-16">
         <h2 className="text-4xl font-extrabold uppercase relative z-10">
           My Programming <span className="text-red-500">Journey</span>
@@ -168,25 +154,10 @@ const ExperienceEducation = () => {
     <>
       <Introduction />
       <section
-        className={`py-16 px-6 sm:px-10 lg:px-12 transition-colors duration-300 rounded-md shadow-lg max-w-7xl mx-auto ${
+        className={`py-16 px-6 sm:px-10 lg:px-12 transition-colors duration-300 rounded-md shadow-lg max-w-7xl mx-auto mb-20 ${
           darkMode ? "bg-black text-white" : "bg-white text-gray-900"
         }`}
       >
-        {/* <div className="relative text-center mb-20">
-          <h2 className="text-3xl sm:text-4xl font-extrabold uppercase relative z-10 tracking-wide">
-            Experience <span className="text-red-500">& Education</span>
-          </h2>
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-            <span
-              className={`text-[72px] sm:text-[96px] md:text-[130px] font-extrabold opacity-10 ${
-                darkMode ? "text-gray-800" : "text-gray-300"
-              }`}
-            >
-              Education
-            </span>
-          </div>
-        </div> */}
-
         <div className="relative text-center mb-16">
           <h2 className="text-4xl font-extrabold uppercase relative z-10">
             Experience <span className="text-red-500">& Education</span>
