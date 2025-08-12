@@ -8,7 +8,7 @@ const ProjectCard = ({ images, title, des, codeLink, liveLink, id }) => {
 
   return (
     <div
-      className={`relative overflow-hidden rounded-2xl shadow-2xl group cursor-pointer transition-transform duration-500 hover:scale-[1.03]
+      className={`relative  overflow-hidden rounded-2xl shadow-2xl group cursor-pointer transition-transform duration-500 hover:scale-[1.03]
       ${
         darkMode
           ? "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white"

@@ -164,17 +164,16 @@ const ExperienceEducation = () => {
           darkMode ? "bg-black text-white" : "bg-white text-gray-900"
         }`}
       >
+        {/* Heading */}
         <div className="relative text-center mb-16">
-          <h2 className="text-4xl font-extrabold uppercase relative z-10">
+          <h2 className="text-4xl sm:text-5xl font-extrabold uppercase relative z-10">
             Experience <span className="text-red-500">& Education</span>
           </h2>
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+            {/* Responsive background text with clamp for smooth scaling */}
             <span
-              className="font-extrabold opacity-10 select-none pointer-events-none"
-              style={{
-                fontSize: "clamp(3rem, 10vw, 9rem)", // dynamically scales from 48px to 144px roughly
-                lineHeight: 1,
-              }}
+              className="font-extrabold opacity-10"
+              style={{ fontSize: "clamp(4rem, 8vw, 7rem)", lineHeight: 1 }}
             >
               Education
             </span>
