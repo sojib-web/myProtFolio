@@ -68,7 +68,7 @@ const Contact = () => {
             {/* Responsive background text with clamp for smooth scaling */}
             <span
               className="font-extrabold opacity-10"
-              style={{ fontSize: "clamp(3rem, 10vw, 9rem)", lineHeight: 1 }}
+              style={{ fontSize: "clamp(2rem, 8vw, 7rem)", lineHeight: 1 }}
             >
               CONTACT
             </span>
