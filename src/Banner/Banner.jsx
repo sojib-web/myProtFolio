@@ -95,23 +95,25 @@ const Banner = () => {
           experiences.
         </p>
 
-        {/* Resume Button */}
-        <a
-          href="/resume.pdf"
-          download
-          className={`relative group flex items-center justify-between w-56 h-12 px-6 py-3 rounded-full border font-semibold overflow-hidden transition-all duration-300 ${
-            darkMode
-              ? "border-red-500 text-white hover:shadow-[0_0_10px_#ef4444]"
-              : "border-red-500 text-black hover:text-white hover:shadow-[0_0_10px_#ef4444]"
-          }`}
-        >
-          <span className="z-10"> Download Resume</span>
-          <span
-            className={`absolute right-0 top-0 h-full aspect-square bg-red-500 rounded-full flex items-center justify-center group-hover:scale-105`}
+        {/* Resume Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+          {/* View Resume Button */}
+          <a
+            href="https://drive.google.com/file/d/1vSwTUKvkQZuTBz5Jz9Pq7WImz4wmNt3t/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`relative group flex items-center justify-between w-56 h-12 px-6 py-3 rounded-full border font-semibold overflow-hidden transition-all duration-300 ${
+              darkMode
+                ? "border-red-500 text-white hover:shadow-[0_0_10px_#ef4444]"
+                : "border-red-500 text-black hover:text-white hover:shadow-[0_0_10px_#ef4444]"
+            }`}
           >
-            <FaPaperPlane className="text-white" />
-          </span>
-        </a>
+            <span className="z-10">View Resume</span>
+            <span className="absolute right-0 top-0 h-full aspect-square bg-red-500 rounded-full flex items-center justify-center group-hover:scale-105">
+              <FaPaperPlane className="text-white" />
+            </span>
+          </a>
+        </div>
       </div>
 
       {/* Social & Skills Section */}
