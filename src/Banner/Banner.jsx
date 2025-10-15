@@ -83,7 +83,7 @@ const Banner = () => {
           frameworks like Tailwind CSS & Bootstrap.
           <br />I have 2 months of professional experience at{" "}
           <a
-            href="https://www.facebook.com/softexellbd/"
+            href="https://softexel.com/"
             className="text-red-500 font-bold"
             target="_blank"
             rel="noopener noreferrer"
