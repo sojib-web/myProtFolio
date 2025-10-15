@@ -8,7 +8,6 @@
     "improvements": "Add mobile app and AI-based gardening tips.",
     "codeLink": "https://github.com/sojib-web",
     "liveLink": "https://gardening-community-client.web.app/",
-
     "images": [
       "https://i.ibb.co/1JbNs2Qw/gardening-community-client-web-app.png",
       "https://i.ibb.co/fGFVHHLG/gardening-community-client-web-app-2.png",
@@ -53,19 +52,19 @@
   },
   {
     "id": 3,
-    "title": "Fitness Tracker",
-    "des": "Track workouts, calories, and progress with dynamic charts.",
-    "techStack": "React, Chart.js, CSS",
+    "title": "Ecommerce Project",
+    "des": "A modern eCommerce web application built with Next.js 15, React 19, NextAuth, and MongoDB. This project includes authentication, product management, image uploads via Cloudinary, and a responsive UI with TailwindCSS and Dark Mode support.",
+    "techStack": "Next.js 15, React 19, NextAuth, MongoDB, TailwindCSS, Cloudinary",
     "challenges": "Real-time progress updates and chart rendering.",
     "improvements": "Add social sharing and mobile support.",
-    "codeLink": "https://github.com/sojib-web/fitness-tracker",
-    "liveLink": "https://fitness-sojib.netlify.app",
+    "codeLink": "https://github.com/sojib-web/nextjs-basic-ecom",
+    "liveLink": "https://nextjs-basic-ecom.vercel.app/",
     "images": [
-      "https://i.ibb.co/FqVYZbbh/image.png",
-      "https://i.ibb.co/8Ly4Q6fX/service-review-system-a221e-web-app-all-Services.png",
-      "https://i.ibb.co/F4vnt4ry/service-review-system-a221e-web-app-services.png",
-      "https://i.ibb.co/Q77KStQ5/service-review-system-a221e-web-app-services-1.png",
-      "https://i.ibb.co/JRy9vZvs/service-review-system-a221e-web-app-services-2.png"
+      "https://i.ibb.co/1Y66GkdV/screencapture-nextjs-basic-ecom-vercel-app-2025-10-14-16-56-25.png",
+      "https://i.ibb.co/WvXJ09MW/screencapture-nextjs-basic-ecom-vercel-app-products-68e29a7c5d84e06fa7524b6d-2025-10-14-16-56-48.png",
+      "https://i.ibb.co/JjHdtBV1/screencapture-nextjs-basic-ecom-vercel-app-dashboard-add-product-2025-10-14-16-57-02.png",
+      "https://i.ibb.co/Q31t7Gcy/screencapture-nextjs-basic-ecom-vercel-app-login-2025-10-15-22-16-49.png",
+      "https://i.ibb.co/1Y66GkdV/screencapture-nextjs-basic-ecom-vercel-app-2025-10-14-16-56-25.png"
     ]
   },
   {
