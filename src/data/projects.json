@@ -69,19 +69,19 @@
   },
   {
     "id": 4,
-    "title": "Marketing Site",
+    "title": "softexel Marketing Site",
     "des": "Landing page for SEO and digital marketing campaigns.",
     "techStack": "React, Tailwind CSS, Netlify",
     "challenges": "Optimizing page load speed and SEO.",
     "improvements": "Add blog and newsletter integration.",
-    "codeLink": "https://github.com/sojib-web/marketing-site",
-    "liveLink": "https://marketing-sojib.netlify.app",
+    "codeLink": "https://github.com/sojib-web/softexel-website-new",
+    "liveLink": "https://softexel.com/index.html",
     "images": [
-      "https://i.ibb.co/FqVYZbbh/image.png",
-      "https://i.ibb.co/8Ly4Q6fX/service-review-system-a221e-web-app-all-Services.png",
-      "https://i.ibb.co/F4vnt4ry/service-review-system-a221e-web-app-services.png",
-      "https://i.ibb.co/Q77KStQ5/service-review-system-a221e-web-app-services-1.png",
-      "https://i.ibb.co/JRy9vZvs/service-review-system-a221e-web-app-services-2.png"
+      "https://i.ibb.co.com/DPp4p7RC/screencapture-softexel-index-html-2025-10-15-22-38-48.png",
+      "https://i.ibb.co.com/JRCXLPHW/screencapture-softexel-web-UI-html-2025-10-15-22-40-30.png",
+      "https://i.ibb.co.com/wrYws6tj/screencapture-softexel-contact-Page-html-2025-10-15-22-40-52.png",
+      "https://i.ibb.co.com/ycQd981Q/screencapture-softexel-blog-html-2025-10-15-22-41-52.png",
+      "https://i.ibb.co.com/pjp2JXfK/screencapture-softexel-blog-html-2025-10-15-22-41-52-1.png"
     ]
   },
   {
